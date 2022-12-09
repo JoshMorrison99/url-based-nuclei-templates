@@ -15,7 +15,7 @@ requests:
 
     payloads:
       injection:
-        - '0"XOR(if(now()=sysdate(),sleep(12),0))XOR"Z'
+        - '0"XOR(if(now()=sysdate(),sleep(30),0))XOR"Z'
 
     fuzzing:
       - part: query
@@ -26,4 +26,4 @@ requests:
     matchers:
       - type: dsl
         dsl:
-          - 'duration>=15'
+          - 'duration>=30'
