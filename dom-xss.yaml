@@ -7,7 +7,7 @@ info:
   tags: xss,dom-xss
 
 variables:
-  first: 'href="javascript:alert(1)"'
+  first: 'javascript:alert(1)'
 
 requests:
   - method: GET
