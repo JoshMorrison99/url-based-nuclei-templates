@@ -4,8 +4,13 @@ info:
   name: Linux LFI
   author: shelled
   severity: high
-  description: Detects LFI on Linux.
-  tags: lfi, generic
+  description: Generic Linux is subject to local file Inclusion on searches for /etc/passwd on passed URLs.
+  reference: https://github.com/imhunterand/ApachSAL/blob/main/assets/exploits.json
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    cvss-score: 7.5
+    cwe-id: CWE-22
+  tags: linux,lfi,generic
 
 requests:
   - method: GET
