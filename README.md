@@ -1,0 +1,30 @@
+# url-based-nuclei-templates
+Nuclei templates to run on urls
+
+## ssrf-blind-host
+This will inject the `interactsh` endpoint into the host header and check for an response. The video below is the inspiration beind creating the filter.
+- https://www.youtube.com/watch?v=LRQuTEAwhc4&ab_channel=IfqyGifhaazhar
+
+## dom-xss-web-message
+This filter will check for `window.addEventListener('message'` in the response. This does not indicate that there is an xss, but that you need to look into this. There are certain sources and sinks that should not be used when using `window.addEventListener('message'`. The link below will teach you.
+- https://portswigger.net/web-security/dom-based/controlling-the-web-message-source
+
+## dom-xss
+This filter will check for `href="javascript:alert(1)"` in the response when `javascript:alert(1)` is the source at location.search. Having a location.search value of `javascript:alert(1)` injected into an anchor `href` attribute sink will result in an XSS.
+- https://portswigger.net/web-security/cross-site-scripting/dom-based
+- https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-jquery-href-attribute-sink
+
+## time-based-sql-injection
+This filter will inject the payload `'0"XOR(if(now()=sysdate(),sleep(30),0))XOR"Z'`. If the response takes longer than 30 seconds, then the filter will trigger. False positive will occur.
+
+## reflected-parameters
+This filter checks for urls that are reflecting input. This can be done with tools such as `GXSS` and `dalfox`, but creating a nuclei template is easier.
+
+## lfi-windows
+This filter check for LFI on windows by searching for `win.ini` through directory traversal.
+
+## lfi-linux
+This filter check for LFI on linux by searching for `/etc/passwd` through directory traversal.
+
+## lfi-j2ee
+This filter check for LFI on j2ee by searching for `web.xml` through directory traversal.
