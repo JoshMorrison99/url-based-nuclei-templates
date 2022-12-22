@@ -40,5 +40,5 @@ https://example.com/questions?continue=about --> request will not be sent
 ```
 My blind-ssrf.yaml Template:
 https://example.com/questions?url=https://indeed.com --> https://example.com/questions?url=https://{{interactsh}} --> request will be sent
-https://example.com/questions?continue=about --> https://example.com/questions?url=https://{{interactsh}} --> request will be sent
+https://example.com/questions?continue=about --> https://example.com/questions?continue=https://{{interactsh}} --> request will be sent
 ```
