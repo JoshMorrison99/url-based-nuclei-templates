@@ -28,3 +28,17 @@ This filter check for LFI on linux by searching for `/etc/passwd` through direct
 
 ## lfi-j2ee
 This filter check for LFI on j2ee by searching for `web.xml` through directory traversal.
+
+## ssrf-blind
+There is a similar template in nuclei fuzzing templates called `blind-ssrf.yaml`, but that template will only send a request if there is already a url with `https` in the query parameter. This template will send the request in all urls.
+```
+Nuclei blind-ssrf.yaml Template:
+https://example.com/questions?url=https://indeed.com --> https://example.com/questions?url=https://{{interactsh}} --> request will be sent
+https://example.com/questions?continue=about --> request will not be sent
+```
+
+```
+My blind-ssrf.yaml Template:
+https://example.com/questions?url=https://indeed.com --> https://example.com/questions?url=https://{{interactsh}} --> request will be sent
+https://example.com/questions?continue=about --> https://example.com/questions?url=https://{{interactsh}} --> request will be sent
+```
