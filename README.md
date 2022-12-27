@@ -42,3 +42,6 @@ My blind-ssrf.yaml Template:
 https://example.com/questions?url=https://indeed.com --> https://example.com/questions?url=https://{{interactsh}} --> request will be sent
 https://example.com/questions?continue=about --> https://example.com/questions?continue=https://{{interactsh}} --> request will be sent
 ```
+
+## blind-xss
+This template is used to spray for detect blind xss. You can use a website like `xss.report` to check if your payload fired or not. If you use this template make sure to replace the payloads with your `xss.report` URL. I don't want to report your findings :wink: 
