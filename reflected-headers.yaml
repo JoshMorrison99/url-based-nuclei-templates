@@ -1,0 +1,33 @@
+id: reflected-parameters
+
+info:
+  name: Reflected Parameters
+  author: shelled
+  severity: info
+  tags: xss,cache
+
+variables:
+  first: "shelled"
+
+requests:
+  - raw:
+      - | 
+        GET {{BaseURL}} HTTP/1.1
+        Referer: {{reflection}}
+
+    payloads:
+      reflection:
+        - "shelled"
+
+    stop-at-first-match: true
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "{{reflection}}"
+
+      - type: word
+        part: header
+        words:
+          - "text/html"
