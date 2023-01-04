@@ -13,6 +13,7 @@ requests:
   - raw:
       - | 
         GET {{BaseURL}} HTTP/1.1
+        Host: {{Hostname}}
         Referer: {{reflection}}
 
     payloads:
