@@ -51,3 +51,6 @@ This template is used for finding open redirects. It is similar to the one in th
 
 ## blind-xss-user-agent
 This template will inject blind xss payloads in user-agent header.
+
+## reflected-headers
+This template uses common header and checks if they are being reflected in the response.
