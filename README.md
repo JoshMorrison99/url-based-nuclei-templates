@@ -48,3 +48,6 @@ This template is used to spray for detect blind xss. You can use a website like 
 
 ## redirect
 This template is used for finding open redirects. It is similar to the one in the nuclei fuzzing repository but this template will fuzz for open redirect only on the URL given (this is because I perform parameter mining before I feed URLs to templates). This template also has a few common open redirect bypasses. 
+
+## blind-xss-user-agent
+This template will inject blind xss payloads in user-agent header.
