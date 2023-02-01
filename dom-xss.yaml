@@ -17,6 +17,7 @@ requests:
     payloads:
       reflection:
         - 'href="javascript:alert(1)"'
+        - 'href=javascript:alert(1)'
 
     fuzzing:
       - part: query
