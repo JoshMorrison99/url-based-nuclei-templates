@@ -1,4 +1,5 @@
 id: missing-x-frame-options
+DONT USE
 
 info:
   name: Clickjacking
