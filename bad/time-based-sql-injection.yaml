@@ -1,4 +1,5 @@
 id: time-based-sql-injection
+DONT USE
 
 info:
   name: Time Based SQL Injection
