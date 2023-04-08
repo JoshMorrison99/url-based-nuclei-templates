@@ -16,7 +16,7 @@ requests:
       - type: word
         part: body
         words:
-          - "window.addEventListener('message'"
+          - "window.addEventListener('message')"
 
       - type: word
         part: header
